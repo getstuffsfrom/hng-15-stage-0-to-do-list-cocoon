@@ -1,0 +1,6 @@
+{
+  "name": "VoxelQuill - Minecraft Note & Quest Journal",
+  "description": "An authentic tactile Minecraft-inspired notebook, task tracker, and anti-gravity sandbox journal crafted with custom pixel art, biome themes, sound effects, and book & quill notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

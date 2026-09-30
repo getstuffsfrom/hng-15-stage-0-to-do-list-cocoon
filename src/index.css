@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --mc-bg-dark: #12101a;
+    --mc-wood-bark: #2a1f1d;
+    --mc-wood-plank: #3a2e2b;
+    --mc-cherry: #c97d93;
+    --mc-cherry-dark: #8c4a5d;
+    --mc-amethyst: #9a6bbd;
+    --mc-amethyst-dark: #5e3b79;
+    --mc-moss: #5d7c3e;
+    --mc-glow: #e5a84b;
+    --mc-parchment: #f4ecd8;
+    --mc-parchment-border: #c8b99d;
+    --mc-ink: #2b2520;
+    --mc-xp: #55ff55;
+  }
+
+  body {
+    background-color: #120f1d;
+    color: #ded9e8;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    image-rendering: pixelated;
+  }
+}
+
+/* Minecraft Pixel Borders and Shadows */
+.mc-font-hud {
+  font-family: 'VT323', monospace;
+  letter-spacing: 0.05em;
+}
+
+.mc-font-pixel {
+  font-family: 'Pixelify Sans', 'Silkscreen', monospace;
+}
+
+.mc-container {
+  background-color: #242033;
+  border: 3px solid #100d18;
+  box-shadow: 
+    inset 3px 3px 0px rgba(255, 255, 255, 0.12),
+    inset -3px -3px 0px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mc-panel-dark {
+  background-color: #1a1626;
+  border: 2px solid #0d0a14;
+  box-shadow: 
+    inset 2px 2px 0px rgba(255, 255, 255, 0.06),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.6);
+}
+
+.mc-slot {
+  background-color: #161320;
+  border: 2px solid #0d0b16;
+  box-shadow: 
+    inset 2px 2px 0px rgba(0, 0, 0, 0.6),
+    inset -2px -2px 0px rgba(255, 255, 255, 0.08);
+  transition: all 0.12s ease;
+}
+
+.mc-slot:hover {
+  background-color: #252033;
+}
+
+.mc-slot.active {
+  background-color: #352c48;
+  border-color: #e5a84b;
+  box-shadow: 
+    inset 2px 2px 0px rgba(229, 168, 75, 0.3),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(229, 168, 75, 0.3);
+}
+
+/* Authentic Minecraft Button */
+.mc-button {
+  background: #3e3650;
+  border: 2px solid #14111d;
+  box-shadow: 
+    inset 2px 2px 0px rgba(255, 255, 255, 0.18),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.45);
+  color: #ded8eb;
+  text-shadow: 1px 1px 0px #000;
+  transition: transform 0.08s ease, background-color 0.12s ease;
+  user-select: none;
+}
+
+.mc-button:hover {
+  background: #504667;
+  color: #ffffff;
+}
+
+.mc-button:active {
+  transform: translateY(2px);
+  background: #312a40;
+  box-shadow: 
+    inset 2px 2px 0px rgba(0, 0, 0, 0.6),
+    inset -2px -2px 0px rgba(255, 255, 255, 0.1);
+}
+
+.mc-button-primary {
+  background: #5a3c6d;
+  border-color: #23122e;
+  box-shadow: 
+    inset 2px 2px 0px rgba(230, 190, 255, 0.35),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.mc-button-primary:hover {
+  background: #6e4b85;
+}
+
+.mc-button-moss {
+  background: #466030;
+  border-color: #1e2d14;
+  box-shadow: 
+    inset 2px 2px 0px rgba(210, 245, 170, 0.35),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.mc-button-moss:hover {
+  background: #55743b;
+}
+
+.mc-button-cherry {
+  background: #87495b;
+  border-color: #3b1b24;
+  box-shadow: 
+    inset 2px 2px 0px rgba(255, 205, 220, 0.35),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.mc-button-cherry:hover {
+  background: #a0566c;
+}
+
+/* Parchment Book and Quill style */
+.mc-parchment {
+  background-color: #f7f1e1;
+  background-image: 
+    radial-gradient(#e8ddc4 1px, transparent 1px),
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 20px 20px, 32px 32px;
+  color: #2c241c;
+  border: 3px solid #6b513a;
+  box-shadow: 
+    inset 3px 3px 0px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 0px rgba(100, 75, 50, 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Minecraft Item Tooltip */
+.mc-tooltip {
+  background: rgba(16, 1, 24, 0.95);
+  border: 2px solid #280845;
+  box-shadow: 
+    inset 1px 1px 0px #500e8b,
+    inset -1px -1px 0px #500e8b;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #24003d;
+}
+
+/* XP Bar glowing texture */
+.mc-xp-bar {
+  background: #141416;
+  border: 1px solid #000;
+  box-shadow: inset 1px 1px 0 #333;
+}
+
+.mc-xp-fill {
+  background: linear-gradient(180deg, #78ff54 0%, #46bf2f 50%, #2f8e1c 100%);
+  box-shadow: 0 0 8px rgba(85, 255, 85, 0.6);
+}
+
+/* Custom Minecraft-style Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171424;
+  border: 1px solid #0e0c17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c3450;
+  border: 2px solid #171424;
+  box-shadow: inset 1px 1px 0 #584c74;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #50446b;
+}
+
+/* Anti-gravity floating elements animation */
+@keyframes zeroGDrift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-1.2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.antigravity-float {
+  animation: zeroGDrift 6s ease-in-out infinite;
+}
+
+@keyframes petalDrift {
+  0% {
+    transform: translate(0, 100vh) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(120px, -50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal-drift {
+  animation: petalDrift 14s linear infinite;
+}
